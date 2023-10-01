@@ -12,10 +12,16 @@ namespace App\Domain\Product\Http\Controllers\Api\Backend;
 
 use App\Infrastructure\Http\Controllers\Backend\BaseApiController;
 use Exception;
+use OpenApi\Annotations as OA;
 
 class ProductController extends BaseApiController
 {
     /**
+     * @OA\Get(
+     *     path="/api/products",
+     *     summary="Get All Data Json Or Xml",
+     *     @OA\Response(response="200", description="Success")
+     * )
      * @throws Exception
      */
     public function index()
