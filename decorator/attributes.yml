@@ -1,0 +1,15 @@
+attributes:
+  id: uuid
+  title: name
+  description: des
+  price: net
+  discountPercentage: percentage
+  rating: rate
+  stock: stock
+  brand: brand
+  category: cat
+  thumbnail: image_url
+  images: pictures
+  email: user_email
+  adderes: address
+  createdat: created_at
