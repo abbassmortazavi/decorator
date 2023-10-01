@@ -3,6 +3,7 @@
 namespace App\Domain\Product\Services\Backend;
 
 
+use App\Domain\Product\Enums\OutputExport;
 use App\Domain\Product\Strategy\ExportDataStrategy;
 use Exception;
 use Illuminate\Support\Facades\Http;
@@ -20,8 +21,7 @@ class ProductService
         $xmlData = new SimpleXMLElement("http://restapi.adequateshop.com/api/Traveler", null, true);
 
         $outPutContext = new ExportDataStrategy();
-        return $outPutContext->generateOutput("xml", $xmlData);
-
+        return $outPutContext->generateOutput(OutputExport::JSON->value, $jsonData);
     }
 
 }

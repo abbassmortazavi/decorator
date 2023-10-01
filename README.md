@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"></a> <b>Use Github Api Code Challenge</b>
+<p align="center"><a href="https://laravel.com" target="_blank"></a> <b>Project Instruction</b>
 <p align="center">
 
 </p>
@@ -16,6 +16,7 @@
 - Artisan
 - Cron
 - Swagger(for api documentation)
+- DDD(Domain Driven Design)
 
 ## Installation
 ```sh
@@ -50,36 +51,17 @@ docker-compose run --rm npm i
 step 1 : run this command: cp .env.example .env
 step 2 : docker-compose run --rm artisan key:generate
 step 3 : docker-compose run --rm artisan optimize
-step 4: in this .env.example i set my token and you can test it! 
 ```
 
 ## Project Host for test Api
 ```sh
 like this : http://localhost:8082
 this is my localhost in my system.
-sample : http://localhost:8082/api/all-repo?user_name=abbassmortazavi
+sample : http://localhost:8082/api/products
 ```
 
 ## Project Documentation Swagger
 ```sh
-like this : http://localhost:8082/api/documentation#/
-```
-
-## Explain How to Run Command
-```sh
-if you run command you can write this : 
-docker-compose run --rm artisan github:command --single
-after run this in your terminal you see asking to you:
-Which Command To Run?
-this way you should be select one item and after you select command excute.
-like this : 
- Which Command To Run?:
-  [0] create
-  [1] delete
- > 1
-perfect!
-also if you like run all you should use this command:
-docker-compose run --rm artisan github:command
-thats all.
+like this : http://localhost:8082/api/documentation/
 ```
 
