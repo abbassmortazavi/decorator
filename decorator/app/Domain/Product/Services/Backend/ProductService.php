@@ -20,7 +20,7 @@ class ProductService
         $xmlData = new SimpleXMLElement("http://restapi.adequateshop.com/api/Traveler", null, true);
 
         $outPutContext = new ExportDataStrategy();
-        return $outPutContext->generateOutput("json", $jsonData);
+        return $outPutContext->generateOutput("xml", $xmlData);
 
     }
 
