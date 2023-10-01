@@ -11,6 +11,7 @@
 namespace App\Domain\Product\Strategy;
 
 use App\Domain\Product\Enums\OutputExport;
+use Exception;
 
 class ExportDataStrategy
 {
@@ -18,6 +19,7 @@ class ExportDataStrategy
      * @param string $type
      * @param object $data
      * @return array
+     * @throws Exception
      */
     public function generateOutput(string $type, object $data): array
     {
@@ -28,12 +30,14 @@ class ExportDataStrategy
     /**
      * @param string $type
      * @return XMLOutput|JSONOutput|string
+     * @throws Exception
      */
     private function defineExportData(string $type): XMLOutput|JSONOutput|string
     {
         return match ($type) {
             OutputExport::XML->value => new XMLOutput(),
-            default => new JSONOutput(),
+            OutputExport::JSON->value => new JSONOutput(),
+            default => throw new Exception('Not Found Export Type!'),
         };
     }
 }

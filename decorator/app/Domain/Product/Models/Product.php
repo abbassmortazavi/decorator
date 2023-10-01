@@ -7,5 +7,4 @@ use App\Infrastructure\Models\BaseModel;
 class Product extends BaseModel
 {
 
-
 }

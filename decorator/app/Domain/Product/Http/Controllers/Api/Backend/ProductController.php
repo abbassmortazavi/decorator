@@ -6,13 +6,12 @@
  * @version 1.0.0
  * @date 2023/09/26 20:43
  */
-
-
 namespace App\Domain\Product\Http\Controllers\Api\Backend;
 
 use App\Infrastructure\Http\Controllers\Backend\BaseApiController;
 use Exception;
 use OpenApi\Annotations as OA;
+use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 class ProductController extends BaseApiController
 {
@@ -26,7 +25,13 @@ class ProductController extends BaseApiController
      */
     public function index()
     {
-        $service = resolve('App\Domain\Product\Services\Backend\ProductService');
-        return response()->json($service->index());
+        try {
+            $service = resolve('App\Domain\Product\Services\Backend\ProductService');
+            return response()->json($service->index());
+        } catch (Exception $exception) {
+            return response()->json([
+                'message'=>$exception->getMessage()
+            ], ResponseAlias::HTTP_INTERNAL_SERVER_ERROR);
+        }
     }
 }
