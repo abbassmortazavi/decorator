@@ -1,6 +1,7 @@
 attributes:
   id: uuid
   title: name
+  name: title
   description: des
   price: net
   discountPercentage: percentage

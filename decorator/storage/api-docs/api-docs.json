@@ -7,18 +7,13 @@
     "paths": {
         "/api/products": {
             "get": {
-                "summary": "Get logged-in user details",
-                "operationId": "eec195bae1668e0c794f92683bde4b90",
+                "summary": "Get All Data Json Or Xml",
+                "operationId": "4e2799e90601cbaa0a53beacd6ac8f80",
                 "responses": {
                     "200": {
                         "description": "Success"
                     }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
+                }
             }
         }
     }

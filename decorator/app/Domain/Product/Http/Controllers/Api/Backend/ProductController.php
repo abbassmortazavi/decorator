@@ -23,11 +23,11 @@ class ProductController extends BaseApiController
      * )
      * @throws Exception
      */
-    public function index()
+    public function products()
     {
         try {
             $service = resolve('App\Domain\Product\Services\Backend\ProductService');
-            return response()->json($service->index());
+            return response()->json($service->products());
         } catch (Exception $exception) {
             return response()->json([
                 'message'=>$exception->getMessage()

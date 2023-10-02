@@ -62,6 +62,7 @@ sample : http://localhost:8082/api/products
 
 ## Project Documentation Swagger
 ```sh
+first of all run this command: docker-compose run --rm artisan l5-swagger:generate
 like this : http://localhost:8082/api/documentation/
 ```
 
