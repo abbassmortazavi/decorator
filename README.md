@@ -66,3 +66,8 @@ first of all run this command: docker-compose run --rm artisan l5-swagger:genera
 like this : http://localhost:8082/api/documentation/
 ```
 
+## Video Link to explain all part of project:
+```sh
+https://www.awesomescreenshot.com/video/21239699?key=928af49da997ebb088aac35c0293d33c
+```
+

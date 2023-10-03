@@ -6,6 +6,7 @@
  * @version 1.0.0
  * @date 2023/09/26 20:43
  */
+
 namespace App\Domain\Product\Http\Controllers\Api\Backend;
 
 use App\Infrastructure\Http\Controllers\Backend\BaseApiController;
@@ -19,7 +20,8 @@ class ProductController extends BaseApiController
      * @OA\Get(
      *     path="/api/products",
      *     summary="Get All Data Json Or Xml",
-     *     @OA\Response(response="200", description="Success")
+     *     @OA\Response(response="200", description="Success"),
+     *     @OA\Response(response="500", description="Fail")
      * )
      * @throws Exception
      */
@@ -30,7 +32,7 @@ class ProductController extends BaseApiController
             return response()->json($service->products());
         } catch (Exception $exception) {
             return response()->json([
-                'message'=>$exception->getMessage()
+                'message' => $exception->getMessage()
             ], ResponseAlias::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
